@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FORTUNES } from "@/lib/fortunes";
-import { FortuneCard } from "@/components/FortuneCard";
 import { Character } from "@/components/Character";
 import { CycleImage } from "@/components/CycleImage";
+import { TarotMarquee, type TarotPhoto } from "@/components/TarotMarquee";
 import { HERO_SLIDES, HERO_INTERVAL_MS } from "@/lib/heroSlides";
 import { ArrowRightIcon } from "@/components/icons/Icon";
 
@@ -10,6 +10,15 @@ const ROMAN = [
   "I", "II", "III", "IV", "V", "VI",
   "VII", "VIII", "IX", "X", "XI", "XII",
 ];
+
+/** タロットマーキー用の写真リスト：FORTUNES から構成 */
+const TAROT_PHOTOS: TarotPhoto[] = FORTUNES.map((f, i) => ({
+  src: f.image ?? "",
+  alt: f.name,
+  numeral: ROMAN[i] ?? `${i + 1}`,
+  title: f.name,
+  href: f.href,
+}));
 
 export default function Home() {
   return (
@@ -107,7 +116,7 @@ export default function Home() {
         <p className="void-caption">路地の奥に、灯りが見える。</p>
       </div>
 
-      {/* ============ 占いメニュー（Bento非対称） ============ */}
+      {/* ============ 占いメニュー（タロットマーキー） ============ */}
       <section className="s s-fortunes">
         <div className="container">
           <div className="section-head section-head-left">
@@ -115,26 +124,14 @@ export default function Home() {
             <h2>
               6つの占いが、
               <br />
-              静かに棚に並んでいる。
+              静かに流れている。
             </h2>
-            <p>触れたものから、運命を覗く。</p>
-          </div>
-
-          <div className="bento-grid">
-            {/* 大型シネマティック：手相 */}
-            <FortuneCard fortune={FORTUNES[0]} variant="cinematic" />
-            {/* スコア風：今日の運勢 */}
-            <FortuneCard fortune={FORTUNES[5]} variant="score" />
-            {/* 標準大：生年月日 */}
-            <FortuneCard fortune={FORTUNES[2]} variant="standard" withMedia />
-            {/* 引用風：総合人生 */}
-            <FortuneCard fortune={FORTUNES[4]} variant="quote" />
-            {/* 横長：名前 */}
-            <FortuneCard fortune={FORTUNES[1]} variant="wide" withMedia />
-            {/* 小型：居住地 */}
-            <FortuneCard fortune={FORTUNES[3]} variant="compact" />
+            <p>気になった一枚を、そっと選ぶ。</p>
           </div>
         </div>
+
+        {/* マーキーは container の外で全幅に流す */}
+        <TarotMarquee photos={TAROT_PHOTOS} durationSec={50} />
       </section>
 
       {/* ============ 空間遷移：解析室への入口 ============ */}

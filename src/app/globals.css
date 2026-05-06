@@ -8,9 +8,9 @@
      主役：深黒・血赤・提灯赤・暖橙・湿った金
      補助：紫（控えめ）
   ====================================================== */
-  --bg-deep:        #07070B;   /* 最も深い闇 */
-  --bg-night:       #0F0A0E;   /* 路地の夜 */
-  --bg-room:        #14090C;   /* 部屋の中、赤味を含む暗さ */
+  --bg-deep:        #0B0509;   /* 最も深い闇 + 紅の下地（控えめ） */
+  --bg-night:       #130709;   /* 路地の夜、日本の紅を含む */
+  --bg-room:        #1A0A10;   /* 部屋の中、温かい暗さ */
   --red-deep:       #4A0F1B;   /* 血の赤、深い夜の路地 */
   --red-lantern:    #B3261E;   /* 提灯の赤 */
   --red-ember:      #872018;   /* 残り火 */
@@ -99,22 +99,25 @@ h1, h2, h3, .shimmer {
   animation: none !important;
 }
 
-/* ---------- 背景：深夜の路地（赤提灯と霧と微粒子） ---------- */
+/* ---------- 背景：深夜の路地（赤提灯と霧と微粒子） ----------
+   赤は日本の紅・小豆色寄りで控えめに。中華風になりすぎないよう調整。 */
 .starfield {
   position: fixed;
   inset: 0;
   z-index: -2;
   background:
-    /* 提灯の赤い灯り（右上の遠い光源） */
-    radial-gradient(ellipse 900px 640px at 88% 12%, rgba(179, 38, 30, 0.30), transparent 65%),
+    /* 提灯の赤い灯り（右上の遠い光源、日本の赤提灯寄り） */
+    radial-gradient(ellipse 1100px 720px at 88% 12%, rgba(161, 43, 51, 0.24), transparent 70%),
     /* 火の側の暖橙（左下） */
-    radial-gradient(ellipse 700px 500px at 8% 92%, rgba(255, 138, 61, 0.18), transparent 65%),
+    radial-gradient(ellipse 800px 560px at 8% 92%, rgba(255, 138, 61, 0.16), transparent 65%),
+    /* 中央：日本の紅（小豆色寄り）を控えめに */
+    radial-gradient(ellipse 1500px 1000px at 50% 50%, rgba(120, 30, 40, 0.13), transparent 80%),
     /* 中央の薄い湿った金 */
-    radial-gradient(ellipse 1100px 700px at 50% 55%, rgba(214, 168, 95, 0.10), transparent 70%),
-    /* 紫の補助グロー（控えめ） */
-    radial-gradient(ellipse 600px 400px at 30% 25%, rgba(111, 75, 255, 0.10), transparent 70%),
-    /* 路地の濡れた地面の暗いグラデ */
-    linear-gradient(180deg, #07070B 0%, #0F0A0E 45%, #14090C 100%);
+    radial-gradient(ellipse 1100px 700px at 50% 55%, rgba(214, 168, 95, 0.08), transparent 70%),
+    /* 補助の暗赤 */
+    radial-gradient(ellipse 700px 480px at 30% 25%, rgba(110, 35, 35, 0.12), transparent 70%),
+    /* ベース：朱紅より少し暗く、日本の小豆色〜深紅の下地 */
+    linear-gradient(180deg, #0B0509 0%, #130709 45%, #1A0A10 100%);
 }
 /* 霧の層：ゆっくり漂う */
 .starfield::before {
@@ -1058,6 +1061,164 @@ section.s { padding: 110px 0; position: relative; }
   .analysis-stage { height: 460px; }
   .palm-scanner { width: 75%; height: 380px; }
   .score-widget { width: 65%; }
+}
+
+/* ============================================================
+   TarotMarquee — 写真入りタロットカードを横にゆっくり流すマーキー
+   ============================================================ */
+.tarot-marquee {
+  --marquee-duration: 50s;
+  width: 100%;
+  overflow: hidden;
+  padding: 60px 0;
+  /* 両端をフェードアウト */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+          mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.tarot-marquee-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: tarot-scroll var(--marquee-duration) linear infinite;
+  will-change: transform;
+}
+.tarot-marquee:hover .tarot-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes tarot-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ctp-link {
+  display: block;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.card-tarot-photo {
+  width: 180px;
+  height: 260px;
+  flex-shrink: 0;
+  transform: rotate(var(--rot, 0deg));
+  transform-origin: 50% 100%;
+  transition:
+    transform .5s cubic-bezier(0.18, 0.85, 0.28, 1),
+    filter .4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-tarot-photo:hover {
+  transform: rotate(0) translateY(-10px) scale(1.04);
+  filter: drop-shadow(0 0 20px rgba(244, 63, 94, 0.67))
+          drop-shadow(0 0 8px rgba(214, 168, 95, 0.45));
+  z-index: 5;
+}
+
+/* 金の二重縁 */
+.ctp-frame-outer {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--gold-wet, #D6A85F);
+  border-radius: 6px;
+  padding: 5px;
+  background: linear-gradient(180deg, #1A0A10 0%, #0B0509 100%);
+  position: relative;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.6),
+    inset 0 0 24px rgba(214, 168, 95, 0.06);
+}
+.ctp-frame-inner {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(214, 168, 95, 0.55);
+  border-radius: 3px;
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(244, 63, 94, 0.08), transparent 60%);
+}
+
+.ctp-numeral {
+  font-family: var(--font-cormorant), "Cormorant Garamond", serif;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: var(--gold-wet, #D6A85F);
+  text-shadow: 0 0 8px rgba(214, 168, 95, 0.4);
+}
+
+.ctp-photo {
+  width: 100%;
+  flex: 1;
+  border: 1px solid rgba(214, 168, 95, 0.35);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(20, 9, 12, 0.5);
+}
+.ctp-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.06) saturate(1.05);
+  transition: transform 1.2s cubic-bezier(0.18, 0.85, 0.28, 1);
+}
+.card-tarot-photo:hover .ctp-photo img {
+  transform: scale(1.05);
+}
+.ctp-photo::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(11, 5, 9, 0.7) 100%);
+  pointer-events: none;
+}
+
+.ctp-title {
+  margin: 0;
+  font-family: var(--font-cormorant), "Cormorant Garamond", "Noto Serif JP", serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-align: center;
+  color: #FFE0B0;
+  text-transform: uppercase;
+  /* 見出しのシマー無効化（ここはアクセントとしてベタ色） */
+  background: none;
+  -webkit-text-fill-color: #FFE0B0;
+  -webkit-background-clip: border-box;
+  animation: none;
+}
+
+@media (max-width: 540px) {
+  .tarot-marquee { padding: 36px 0; }
+  .tarot-marquee-track { gap: 24px; }
+  .card-tarot-photo { width: 140px; height: 200px; }
+  .ctp-frame-inner { padding: 9px 9px 10px; gap: 6px; }
+  .ctp-numeral { font-size: 11px; }
+  .ctp-title { font-size: 9px; letter-spacing: 0.18em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarot-marquee-track { animation: none; }
 }
 @media (max-width: 540px) {
   .analysis-stage { height: 420px; }
