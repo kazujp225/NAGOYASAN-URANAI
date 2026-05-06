@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>総合人生占い | 星結びの占い</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="starfield"></div>
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="brand" href="../index.html"><span class="logo-mark">✦</span><span>星結びの占い<small>HOSHI MUSUBI</small></span></a>
+    <nav class="nav">
+      <a href="fortunes.html">占い一覧</a>
+      <a href="daily.html">運勢を知る</a>
+      <a href="pricing.html">料金プラン</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="login.html">ログイン</a>
+      <a class="btn btn-primary" href="login.html">新規登録</a>
+    </div>
+  </div>
+</header>
+
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">L I F E   R E A D I N G</span>
+      <h2>✨ 総合人生占い</h2>
+      <p>名前・生年月日・居住地から、あなたの全体像を映し出します。</p>
+    </div>
+
+    <form class="form-card" data-demo="fortune" data-type="life">
+      <div class="form-row">
+        <label>お名前</label>
+        <input type="text" placeholder="例：星野 結" required>
+      </div>
+      <div class="form-row">
+        <label>生年月日</label>
+        <input type="date" required>
+      </div>
+      <div class="form-row">
+        <label>居住地（都道府県）</label>
+        <select required>
+          <option value="">選択してください</option>
+          <option>北海道</option><option>東京都</option><option>神奈川県</option>
+          <option>愛知県</option><option>大阪府</option><option>京都府</option>
+          <option>福岡県</option><option>沖縄県</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>相談テーマ</label>
+        <div class="theme-row">
+          <span class="theme-chip active">総合</span>
+          <span class="theme-chip">恋愛</span>
+          <span class="theme-chip">仕事</span>
+          <span class="theme-chip">金運</span>
+          <span class="theme-chip">人間関係</span>
+        </div>
+      </div>
+      <div class="consent">
+        <input type="checkbox" required>
+        <label>本占いはエンターテインメント目的です。重要な判断は専門家にご相談ください。</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">人生の流れを読み解く</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy">© 2026 星結びの占い (HOSHI MUSUBI)</div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

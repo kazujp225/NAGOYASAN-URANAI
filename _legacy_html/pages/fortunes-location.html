@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>居住地・方位占い | 星結びの占い</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="starfield"></div>
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="brand" href="../index.html"><span class="logo-mark">✦</span><span>星結びの占い<small>HOSHI MUSUBI</small></span></a>
+    <nav class="nav">
+      <a href="fortunes.html">占い一覧</a>
+      <a href="daily.html">運勢を知る</a>
+      <a href="pricing.html">料金プラン</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="login.html">ログイン</a>
+      <a class="btn btn-primary" href="login.html">新規登録</a>
+    </div>
+  </div>
+</header>
+
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">L O C A T I O N</span>
+      <h2>🗾 居住地・方位占い</h2>
+      <p>今いる場所との相性を読み、心地よい行動方位をお届けします。</p>
+    </div>
+
+    <form class="form-card" data-demo="fortune" data-type="location">
+      <div class="form-row">
+        <label>都道府県</label>
+        <select required>
+          <option value="">選択してください</option>
+          <option>北海道</option><option>東北エリア</option>
+          <option>関東エリア</option><option>東京都</option><option>神奈川県</option>
+          <option>中部エリア</option><option>愛知県</option>
+          <option>関西エリア</option><option>大阪府</option><option>京都府</option>
+          <option>中国エリア</option><option>四国エリア</option>
+          <option>九州エリア</option><option>沖縄県</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>市区町村 <span class="muted">（任意）</span></label>
+        <input type="text" placeholder="例：港区">
+      </div>
+      <div class="form-row">
+        <label>テーマ</label>
+        <div class="theme-row">
+          <span class="theme-chip active">総合</span>
+          <span class="theme-chip">引っ越し</span>
+          <span class="theme-chip">旅行</span>
+          <span class="theme-chip">仕事</span>
+          <span class="theme-chip">恋愛</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">場所との相性を読む</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy">© 2026 星結びの占い (HOSHI MUSUBI)</div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

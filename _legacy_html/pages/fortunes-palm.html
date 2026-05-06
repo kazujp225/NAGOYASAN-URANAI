@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>手相占い | 星結びの占い</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="starfield"></div>
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="brand" href="../index.html"><span class="logo-mark">✦</span><span>星結びの占い<small>HOSHI MUSUBI</small></span></a>
+    <nav class="nav">
+      <a href="fortunes.html">占い一覧</a>
+      <a href="daily.html">運勢を知る</a>
+      <a href="pricing.html">料金プラン</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="login.html">ログイン</a>
+      <a class="btn btn-primary" href="login.html">新規登録</a>
+    </div>
+  </div>
+</header>
+
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">P A L M   R E A D I N G</span>
+      <h2>🤚 手相占い</h2>
+      <p>手のひらを撮影、または画像をアップロードしてください。</p>
+    </div>
+
+    <form class="form-card" data-demo="fortune" data-type="palm">
+      <div class="consent">
+        <input type="checkbox" id="consent" required>
+        <label for="consent">
+          この占いはエンターテインメントを目的としたものです。撮影された画像は結果生成のみに使用され、原則として短期間で削除されます。<a href="privacy.html" style="color:var(--gold-soft); text-decoration: underline;">プライバシーポリシー</a>に同意のうえご利用ください。
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>手のひら画像</label>
+        <div class="upload-zone">
+          <div class="icon">📷</div>
+          <div class="upload-text">クリックして撮影 / 画像をアップロード</div>
+          <small class="muted">JPEG / PNG / 5MB まで</small>
+          <input type="file" accept="image/jpeg,image/png" hidden>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>利き手</label>
+        <select required>
+          <option value="">選択してください</option>
+          <option value="right">右手</option>
+          <option value="left">左手</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>年齢帯</label>
+        <select required>
+          <option value="">選択してください</option>
+          <option>10代</option>
+          <option>20代</option>
+          <option>30代</option>
+          <option>40代</option>
+          <option>50代</option>
+          <option>60代以上</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>相談テーマ</label>
+        <div class="theme-row">
+          <span class="theme-chip active">総合</span>
+          <span class="theme-chip">恋愛</span>
+          <span class="theme-chip">仕事</span>
+          <span class="theme-chip">金運</span>
+          <span class="theme-chip">人間関係</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block">手相を読み解く</button>
+      <p class="disclaimer-note" style="margin-top: 18px;">本占いは医療・法律・投資・人生の重大決定の代替ではありません。</p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy">© 2026 星結びの占い (HOSHI MUSUBI)</div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

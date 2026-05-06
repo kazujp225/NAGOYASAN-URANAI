@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>名前占い | 星結びの占い</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="starfield"></div>
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="brand" href="../index.html"><span class="logo-mark">✦</span><span>星結びの占い<small>HOSHI MUSUBI</small></span></a>
+    <nav class="nav">
+      <a href="fortunes.html">占い一覧</a>
+      <a href="daily.html">運勢を知る</a>
+      <a href="pricing.html">料金プラン</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="login.html">ログイン</a>
+      <a class="btn btn-primary" href="login.html">新規登録</a>
+    </div>
+  </div>
+</header>
+
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">N A M E   R E A D I N G</span>
+      <h2>📜 名前占い</h2>
+      <p>名前の響きから、あなたの本質を読み解きます。</p>
+    </div>
+
+    <form class="form-card" data-demo="fortune" data-type="name">
+      <div class="form-row">
+        <label>お名前</label>
+        <input type="text" placeholder="例：星野 結" required>
+      </div>
+      <div class="form-row">
+        <label>ふりがな <span class="muted">（任意）</span></label>
+        <input type="text" placeholder="例：ほしの ゆい">
+      </div>
+      <div class="form-row">
+        <label>ニックネーム <span class="muted">（任意）</span></label>
+        <input type="text" placeholder="普段呼ばれている名前">
+      </div>
+      <div class="form-row">
+        <label>相談テーマ</label>
+        <div class="theme-row">
+          <span class="theme-chip active">総合</span>
+          <span class="theme-chip">恋愛</span>
+          <span class="theme-chip">仕事</span>
+          <span class="theme-chip">金運</span>
+          <span class="theme-chip">人間関係</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">名前を読み解く</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy">© 2026 星結びの占い (HOSHI MUSUBI)</div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

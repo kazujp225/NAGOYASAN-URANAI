@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星結びの占い | あなたの運命、今日ひらく。</title>
+<meta name="description" content="手相・名前・生年月日・居住地から、毎日の運勢と本質をやさしく読み解く占いプラットフォーム。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="starfield"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container inner">
+    <a class="brand" href="index.html">
+      <span class="logo-mark">✦</span>
+      <span>星結びの占い<small>HOSHI MUSUBI</small></span>
+    </a>
+    <nav class="nav">
+      <a href="pages/fortunes.html">占い一覧</a>
+      <a href="pages/daily.html">運勢を知る</a>
+      <a href="#" onclick="return false;">ランキング</a>
+      <a href="pages/pricing.html">料金プラン</a>
+      <a href="#" onclick="return false;">占い師一覧</a>
+      <a href="#" onclick="return false;">コラム</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="pages/login.html">ログイン</a>
+      <a class="btn btn-primary" href="pages/login.html">新規登録</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>あなたの<span class="accent">運命</span>、<br>今日ひらく。</h1>
+      <p class="lead">
+        手相・生年月日・名前・居住地から。<br>
+        毎日の運勢と本質をやさしく読み解く<br>
+        占いプラットフォーム。
+      </p>
+      <div class="pill-row">
+        <a class="pill" href="pages/fortunes-palm.html">🤚 手相占い</a>
+        <a class="pill" href="pages/fortunes-birthdate.html">🎂 生年月日占い</a>
+        <a class="pill" href="pages/fortunes-name.html">📜 名前占い</a>
+        <a class="pill" href="pages/fortunes-life.html">✨ 総合占い</a>
+        <a class="pill" href="pages/daily.html">🌙 今日の運勢</a>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="pages/fortunes.html">無料で占ってみる</a>
+        <a class="btn btn-outline btn-lg" href="pages/pricing.html">👑 プレミアムを見る</a>
+      </div>
+      <div class="hero-meta">毎日更新 / 365日分対応</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="zodiac-ring">
+        <div class="symbols">
+          <span>♈</span><span>♉</span><span>♊</span><span>♋</span>
+          <span>♌</span><span>♍</span><span>♎</span><span>♏</span>
+          <span>♐</span><span>♑</span><span>♒</span><span>♓</span>
+        </div>
+      </div>
+
+      <div class="phone-mock left">
+        <h4>手相占い</h4>
+        <div class="palm"></div>
+        <div class="caption">あなたの手から</div>
+      </div>
+
+      <div class="phone-mock right">
+        <div class="score-card">
+          <div class="score-head">
+            <span class="label">今日の運勢</span>
+            <span class="date">2026/05/06</span>
+          </div>
+          <div class="score-circle">
+            <span class="num">92<small>/100</small></span>
+          </div>
+          <div class="score-row"><span>恋愛運</span><span class="stars">★★★★★</span></div>
+          <div class="score-row"><span>仕事運</span><span class="stars">★★★★☆</span></div>
+          <div class="score-row"><span>金運</span><span class="stars">★★★★☆</span></div>
+          <div class="score-row"><span>健康運</span><span class="stars">★★★★★</span></div>
+        </div>
+      </div>
+
+      <div class="crystal-orb"></div>
+      <div class="tarot-card">🌙</div>
+      <div class="tarot-card b">⭐</div>
+      <div class="tarot-card c">☀</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 占いメニュー ============ -->
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">F O R T U N E   M E N U</span>
+      <h2>5つの占いから、<br>今日のあなたを読み解く</h2>
+      <p>気になるテーマから、ゆっくり選んでください。</p>
+    </div>
+
+    <div class="card-grid cols-5">
+      <a class="fortune-card" href="pages/fortunes-palm.html">
+        <div class="icon">🤚</div>
+        <h3>手相占い</h3>
+        <p>手のひらを撮影して、今のあなたの傾向を読み解きます。</p>
+        <span class="more">READ MORE →</span>
+      </a>
+      <a class="fortune-card" href="pages/fortunes-name.html">
+        <div class="icon">📜</div>
+        <h3>名前占い</h3>
+        <p>名前に宿る響きから、性格と運命の輪郭を映し出します。</p>
+        <span class="more">READ MORE →</span>
+      </a>
+      <a class="fortune-card" href="pages/fortunes-birthdate.html">
+        <div class="icon">🎂</div>
+        <h3>生年月日占い</h3>
+        <p>あなたが生まれた日の星から、本質と今の運気を見ます。</p>
+        <span class="more">READ MORE →</span>
+      </a>
+      <a class="fortune-card" href="pages/fortunes-location.html">
+        <div class="icon">🗾</div>
+        <h3>居住地・方位占い</h3>
+        <p>今いる場所との相性を読み、心地よい行動方位をお届け。</p>
+        <span class="more">READ MORE →</span>
+      </a>
+      <a class="fortune-card" href="pages/fortunes-life.html">
+        <div class="icon">✨</div>
+        <h3>総合人生占い</h3>
+        <p>4つの占いを束ね、今のあなたの全体像を映し出します。</p>
+        <span class="more">READ MORE →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 使い方ステップ ============ -->
+<section class="s" style="background: rgba(167,139,250,0.04);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">H O W   T O</span>
+      <h2>手相占いの使い方</h2>
+      <p>3ステップで、あなたの今日が読み解かれます。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h4>手のひらを撮影</h4>
+        <p>明るい場所で、利き手のひら全体が映るように撮影してください。</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h4>テーマを選ぶ</h4>
+        <p>恋愛・仕事・金運など、いま気になるテーマを選びます。</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h4>結果を受け取る</h4>
+        <p>あなたの傾向と、今日のヒントをやさしくお届けします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 日替わり占い ============ -->
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">D A I L Y</span>
+      <h2>毎日変わる、今日の運勢</h2>
+      <p>365日分。日付ごとに、その日のあなたへ。</p>
+    </div>
+    <div style="max-width: 720px; margin: 0 auto; text-align:center;">
+      <div class="result-body" style="margin: 0;">
+        <span class="muted" style="font-size: 12px; letter-spacing: 0.2em;">2026 / 05 / 06</span>
+        <h3 style="margin-top: 10px;">小さな選択が、流れを変える日</h3>
+        <p>今日は迷ったら「軽い方」を選ぶと良い日です。深く考えすぎず、心が向いた方を信じてみて。<br>会話の中に、ヒントが隠れているかもしれません。</p>
+        <a class="btn btn-gold" href="pages/daily.html">今日の運勢を詳しく見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 料金プラン ============ -->
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">P L A N</span>
+      <h2>無料で始めて、<br>気が向いたら深く読む</h2>
+      <p>あなたのペースで、占いと付き合えます。</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="muted">まずは試してみたい方へ</p>
+        <div class="price">¥0<small>/ 月</small></div>
+        <ul>
+          <li>5種類の占いの簡易結果</li>
+          <li>日替わり占いの一部</li>
+          <li>手相撮影UI</li>
+          <li>X共有</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="pages/login.html">無料ではじめる</a>
+      </div>
+      <div class="plan premium">
+        <span class="badge">PREMIUM</span>
+        <h3>Premium</h3>
+        <p class="muted">深く知りたいあなたへ</p>
+        <div class="price">¥980<small>/ 月</small></div>
+        <ul>
+          <li>詳細結果の全文閲覧</li>
+          <li>総合人生占いの全項目</li>
+          <li>日替わり占いの詳細解説</li>
+          <li>キャラクターからの追加コメント</li>
+          <li>過去の占い履歴閲覧</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="pages/pricing.html">プランを見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Q &amp; A</span>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>占いは無料で使えますか？</summary>
+        <p>はい、5種類の占いの簡易結果と日替わり占いの一部は無料でご利用いただけます。詳細な鑑定結果はPremiumプランで開放されます。</p>
+      </details>
+      <details>
+        <summary>手相画像は保存されますか？</summary>
+        <p>原則として、結果生成後に画像は短期間で削除されます。詳細はプライバシーポリシーをご確認ください。</p>
+      </details>
+      <details>
+        <summary>占い結果はどのくらい当たりますか？</summary>
+        <p>本サービスはエンターテインメントおよび自己理解のきっかけを目的としています。重要な判断は専門家にご相談ください。</p>
+      </details>
+      <details>
+        <summary>解約はいつでもできますか？</summary>
+        <p>はい、Premiumプランはマイページからいつでも解約できます。次回更新日まではプレミアム機能をご利用いただけます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 免責 ============ -->
+<div class="container">
+  <p class="disclaimer-note">
+    本サービスの占い結果は、エンターテインメントおよび自己理解のきっかけとして提供されるものです。<br>
+    医療・法律・金融・その他専門的判断の代替ではありません。
+  </p>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="brand"><span class="logo-mark">✦</span><span>星結びの占い<small>HOSHI MUSUBI</small></span></div>
+        <p class="muted" style="font-size: 13px; margin-top: 14px;">手相・生年月日・名前・居住地から、<br>毎日の運勢を読み解く占いプラットフォーム。</p>
+      </div>
+      <div>
+        <h5>占いを試す</h5>
+        <ul>
+          <li><a href="pages/fortunes-palm.html">手相占い</a></li>
+          <li><a href="pages/fortunes-name.html">名前占い</a></li>
+          <li><a href="pages/fortunes-birthdate.html">生年月日占い</a></li>
+          <li><a href="pages/fortunes-location.html">居住地占い</a></li>
+          <li><a href="pages/fortunes-life.html">総合人生占い</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="pages/daily.html">今日の運勢</a></li>
+          <li><a href="pages/pricing.html">料金プラン</a></li>
+          <li><a href="pages/mypage.html">マイページ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サポート</h5>
+        <ul>
+          <li><a href="pages/terms.html">利用規約</a></li>
+          <li><a href="pages/privacy.html">プライバシーポリシー</a></li>
+          <li><a href="pages/disclaimer.html">免責事項</a></li>
+          <li><a href="#" onclick="return false;">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 星結びの占い (HOSHI MUSUBI) — All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- ============ キャラクターチャット ============ -->
+<aside class="character">
+  <button class="close" aria-label="閉じる">×</button>
+  <div class="head">
+    <div class="avatar">🌙</div>
+    <div class="name">ミラ<small>星見の案内人</small></div>
+  </div>
+  <div class="bubble">
+    こんにちは、ミラだよ🔮<br>
+    今日のあなたは、ちょっと流れが変わり始めてるみたい。<br>
+    まずは気になる占いから、ゆっくり試してみてね。
+  </div>
+</aside>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

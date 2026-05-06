@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン | 星結びの占い</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="starfield"></div>
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="brand" href="../index.html"><span class="logo-mark">✦</span><span>星結びの占い<small>HOSHI MUSUBI</small></span></a>
+    <nav class="nav">
+      <a href="fortunes.html">占い一覧</a>
+      <a href="daily.html">運勢を知る</a>
+      <a href="pricing.html">料金プラン</a>
+    </nav>
+  </div>
+</header>
+
+<section class="s">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">L O G I N</span>
+      <h2>ようこそ、星見の場所へ</h2>
+      <p>ログインすると、占い履歴の保存とプレミアム機能が利用できます。</p>
+    </div>
+
+    <form class="form-card" onsubmit="event.preventDefault(); window.location.href='mypage.html';">
+      <div class="form-row">
+        <label>メールアドレス</label>
+        <input type="email" placeholder="example@hoshi.jp" required>
+      </div>
+      <div class="form-row">
+        <label>パスワード</label>
+        <input type="password" placeholder="********" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">ログインする</button>
+
+      <div class="text-center" style="margin: 22px 0; color: var(--ink-mute); font-size: 12px;">— または —</div>
+
+      <button type="button" class="btn btn-ghost btn-block">Googleでログイン</button>
+
+      <p class="text-center muted" style="margin-top: 20px; font-size: 13px;">
+        はじめての方は <a href="#" style="color: var(--gold-soft);">新規登録</a><br>
+        パスワードをお忘れの方は <a href="#" style="color: var(--gold-soft);">こちら</a>
+      </p>
+      <p class="disclaimer-note" style="margin-top: 20px;">
+        ログインすると<a href="terms.html" style="color:var(--gold-soft);">利用規約</a>と<a href="privacy.html" style="color:var(--gold-soft);">プライバシーポリシー</a>に同意したものとみなされます。
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy">© 2026 星結びの占い (HOSHI MUSUBI)</div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

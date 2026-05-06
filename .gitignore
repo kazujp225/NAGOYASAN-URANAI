@@ -1,0 +1,20 @@
+node_modules
+.next
+.env*.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# 画像生成の残骸
+hf_*.png
+hf_*.jpg
+
+# IDE・OS
+.idea
+.vscode
+Thumbs.db
+
+# ログ
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
