@@ -2268,14 +2268,40 @@ section.s { padding: 110px 0; position: relative; }
   .lantern { filter: blur(50px); opacity: 0.85; }
 }
 
-/* ===== 768px 以下（スマホ）のみ：動画を抜いて暗景になじませる =====
-   タブレット〜デスクトップは動画継続。 */
+/* ===== 768px 以下（スマホ）：動画とカードを抜き、ポスター画像で見せる =====
+   poster-mobile.jpg にはブランド・見出し・説明・メタが既にベイクされている。 */
+.hero-mobile-poster {
+  display: none;
+}
 @media (max-width: 768px) {
   .hero-video-frame { display: none; }
-  .hero {
+
+  /* モバイルでは hero-visual の中身（カード・星座リング・タロット）を非表示 */
+  .hero-visual { display: none; }
+
+  /* 漢字「占」のオーバーレイも非表示（ポスターの提灯と被るため） */
+  .hero::before { display: none; }
+  /* 上下フェードのオーバーレイも控えめに */
+  .hero::after {
     background:
-      radial-gradient(ellipse 90% 60% at 80% 20%, rgba(161, 43, 51, 0.18), transparent 70%),
-      radial-gradient(ellipse 70% 50% at 15% 80%, rgba(255, 138, 61, 0.10), transparent 70%);
+      linear-gradient(180deg, transparent 0%, transparent 80%, rgba(20, 9, 12, 0.85) 100%);
+  }
+
+  /* ポスター画像をフルブリードで表示 */
+  .hero-mobile-poster {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+  /* 画像のアスペクトに合わせて HERO を縦に大きく取る */
+  .hero {
+    min-height: calc(100vh - 64px);
+    background: var(--bg-deep);
   }
 }
 

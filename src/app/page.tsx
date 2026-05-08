@@ -26,6 +26,14 @@ export default function Home() {
     <>
       {/* ============ HERO ============ */}
       <section className="hero">
+        {/* モバイル専用ポスター画像（テキストは画像内にベイクされている） */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="hero-mobile-poster"
+          src="/hero/poster-mobile.jpg"
+          alt="星結びの占い - あなたの運命、今日ひらく。"
+        />
+
         {/* 動画フレーム：動画のアスペクト比 (2206/946) を保ったままcover配置するラッパー。
             この要素の中で％指定すれば、動画コンテンツの座標と一致する。 */}
         <div className="hero-video-frame" aria-hidden="true">
