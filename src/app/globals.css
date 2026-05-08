@@ -2424,3 +2424,227 @@ section.s { padding: 110px 0; position: relative; }
 @media (min-width: 541px) and (max-width: 768px) {
   .bento-grid { grid-auto-rows: 180px; }
 }
+
+/* ============================================================
+   モバイル仕上げ — 赤味と質感を整える（最後に書いて優先度を確保）
+   ============================================================ */
+
+/* HERO ポスターの底をフェードして次セクションへの繋ぎを滑らかに */
+@media (max-width: 768px) {
+  .hero-mobile-poster {
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent 100%);
+            mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent 100%);
+  }
+
+  /* モバイルでは body 全体に薄い紅のヴェールを敷く */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 700px 900px at 50% 40%, rgba(120, 30, 40, 0.10), transparent 70%),
+      radial-gradient(ellipse 500px 600px at 90% 90%, rgba(161, 43, 51, 0.08), transparent 70%);
+  }
+
+  /* 提灯を少し強めて夜の路地感を上げる */
+  .lantern-a { opacity: 1; }
+  .lantern-b { opacity: 1; }
+
+  /* 大気の雨はモバイルではほぼ無くす（モアレ防止） */
+  .rain { opacity: 0.06; }
+}
+
+@media (max-width: 540px) {
+  /* セクション全体の余白を一段詰める */
+  section.s { padding: 64px 0; }
+  .s-analysis { padding: 70px 0 64px; }
+
+  /* セクション見出し：赤の細線を上に、eyebrow は紅 */
+  .section-head { margin-bottom: 32px; padding: 0 16px; }
+  .section-head .eyebrow {
+    color: #FFB6A8;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    margin-bottom: 14px;
+  }
+  .section-head h2 {
+    font-size: clamp(22px, 5.6vw, 28px);
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .section-head p {
+    font-size: 13px;
+    color: var(--ink-mute);
+    line-height: 1.85;
+  }
+
+  /* 左寄せ見出しは線を紅に */
+  .section-head-left { padding: 0 16px; }
+  .section-head-left .eyebrow {
+    color: #FFB6A8;
+  }
+  .section-head-left .eyebrow::before {
+    background: linear-gradient(90deg, var(--red-lantern), transparent);
+  }
+
+  /* TarotMarquee — 少し大きめに、赤い影で重みを出す */
+  .tarot-marquee { padding: 30px 0 24px; }
+  .tarot-marquee-track { gap: 22px; }
+  .card-tarot-photo {
+    width: 156px;
+    height: 226px;
+    filter:
+      drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55))
+      drop-shadow(0 0 14px rgba(120, 30, 40, 0.18));
+  }
+  .ctp-frame-outer { padding: 4px; border-radius: 5px; }
+  .ctp-frame-inner { padding: 9px 9px 11px; gap: 7px; border-radius: 2px; }
+  .ctp-numeral { font-size: 11px; letter-spacing: 0.28em; }
+  .ctp-title { font-size: 9.5px; letter-spacing: 0.20em; }
+
+  /* 解析室：縦積みで読みやすく */
+  .analysis-shell { gap: 32px; }
+  .analysis-text { padding: 0 16px; }
+  .analysis-text .eyebrow { color: #FFB6A8; font-size: 10px; letter-spacing: 0.36em; }
+  .analysis-text h2 {
+    font-size: clamp(22px, 5.8vw, 28px);
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+  .analysis-text p {
+    font-size: 13.5px;
+    line-height: 1.95;
+    margin-bottom: 22px;
+  }
+  .analysis-stage { height: 460px; padding: 0 4%; }
+  .palm-scanner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: auto;
+    transform: rotateY(0) rotateX(0);
+    border-radius: 16px;
+    box-shadow:
+      0 24px 60px rgba(0, 0, 0, 0.55),
+      0 0 36px rgba(179, 38, 30, 0.15);
+  }
+  .score-widget {
+    position: relative;
+    width: 92%;
+    margin: -36px auto 0;
+    transform: none;
+    bottom: auto; right: auto;
+    border-color: rgba(214, 168, 95, 0.40);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.55),
+      0 0 30px rgba(179, 38, 30, 0.12);
+  }
+  .sw-num { font-size: 44px; }
+  .sw-label { font-size: 11px; letter-spacing: 0.22em; }
+  .sw-stats > div {
+    grid-template-columns: 64px 1fr 28px;
+    font-size: 11px;
+  }
+  .sw-foot { font-size: 10.5px; letter-spacing: 0.2em; }
+
+  /* 結果ボディ・プレミアムロック */
+  .result-body {
+    padding: 26px 22px;
+    border-radius: 18px;
+    margin: 24px auto;
+  }
+  .result-body h3 { font-size: 17px; margin-bottom: 10px; }
+  .result-body p { font-size: 13.5px; line-height: 1.9; margin-bottom: 14px; }
+  .premium-lock { padding: 26px 20px; border-radius: 18px; }
+  .premium-lock h4 { font-size: 17px; }
+  .premium-lock p { font-size: 13px; }
+
+  /* プラン */
+  .plan-grid { gap: 18px; }
+  .plan {
+    padding: 26px 22px;
+    border-radius: 18px;
+  }
+  .plan h3 { font-size: 22px; }
+  .plan .price { font-size: 32px; }
+  .plan .price small { font-size: 12px; }
+  .plan ul { margin: 14px 0 22px; }
+  .plan li { font-size: 13px; padding: 7px 0 7px 24px; }
+  .plan li::before { width: 8px; height: 8px; top: 13px; }
+  .plan.premium { border-color: rgba(179, 38, 30, 0.45); }
+  .plan .badge { font-size: 10px; padding: 5px 12px; }
+
+  /* FAQ */
+  .faq details { padding: 16px 18px; border-radius: 12px; }
+  .faq summary { font-size: 14px; letter-spacing: 0.02em; }
+  .faq p { font-size: 13px; line-height: 1.85; }
+
+  /* 免責文 */
+  .disclaimer-note { font-size: 11px; padding: 0 16px; line-height: 1.85; }
+
+  /* Void：紅の線・小さめ漢字 */
+  .void-alley { height: 110px; }
+  .void-deep { height: 130px; }
+  .void-silence { height: 80px; }
+  .void-line {
+    height: 50px;
+    background: linear-gradient(180deg, transparent, rgba(179, 38, 30, 0.55), transparent);
+  }
+  .void-kanji {
+    font-size: 32px;
+    -webkit-text-stroke: 1px rgba(179, 38, 30, 0.42);
+  }
+  .void-kanji-small {
+    font-size: 22px;
+    -webkit-text-stroke: 1px rgba(179, 38, 30, 0.4);
+  }
+  .void-caption { font-size: 11px; letter-spacing: 0.3em; }
+
+  /* CTA ボタンのモバイル微調整 */
+  .btn-primary {
+    box-shadow:
+      0 10px 28px rgba(179, 38, 30, 0.40),
+      inset 0 0 0 1px rgba(255, 200, 130, 0.20);
+  }
+
+  /* ヘッダー：モバイル時の高さを統一 */
+  .site-header .inner { padding: 12px 0; }
+  .header-cta .btn { padding: 9px 14px; font-size: 13px; min-height: 38px; }
+  .brand { font-size: 15px; gap: 8px; }
+  .brand .logo-mark { width: 26px; height: 26px; }
+
+  /* フッター */
+  .site-footer { margin-top: 30px; padding: 44px 0 24px; }
+  .site-footer .grid { gap: 22px; grid-template-columns: 1fr 1fr; }
+  .site-footer h5 { margin-bottom: 8px; font-size: 12px; letter-spacing: 0.2em; }
+  .site-footer li { padding: 3px 0; }
+  .site-footer a { font-size: 12.5px; }
+  .site-footer .copy { font-size: 11px; padding-top: 18px; }
+
+  /* キャラクター（隅のチャットUI）はモバイルでは控えめに */
+  .character {
+    width: calc(100% - 24px);
+    right: 12px;
+    bottom: 12px;
+    padding: 14px 14px 16px;
+    border-radius: 14px;
+  }
+  .character .head .avatar { width: 36px; height: 36px; }
+  .character .name { font-size: 13px; }
+  .character .bubble { font-size: 12.5px; line-height: 1.7; }
+}
+
+/* iPhone SE 等の極小幅でも崩れないよう */
+@media (max-width: 380px) {
+  .card-tarot-photo { width: 140px; height: 204px; }
+  .ctp-numeral { font-size: 10px; }
+  .ctp-title { font-size: 9px; }
+  .section-head h2 { font-size: 20px; }
+  .analysis-text h2 { font-size: 21px; }
+  .palm-scanner { height: 260px; }
+  .sw-num { font-size: 38px; }
+}
