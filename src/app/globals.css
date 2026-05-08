@@ -2426,6 +2426,70 @@ section.s { padding: 110px 0; position: relative; }
 }
 
 /* ============================================================
+   料金プラン ポスター（東洋幻想の掛軸ビジュアル）
+   ============================================================ */
+.plan-poster {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(179, 38, 30, 0.12);
+}
+.plan-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 1.6s cubic-bezier(0.18, 0.85, 0.28, 1);
+}
+.plan-poster:hover img {
+  transform: scale(1.02);
+}
+/* 画像下部にじわっと黒のグラデを敷いて CTA を読みやすく */
+.plan-poster::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(7, 7, 11, 0.50) 70%,
+    rgba(7, 7, 11, 0.85) 100%
+  );
+  pointer-events: none;
+}
+.plan-cta-row {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 18px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .plan-poster { border-radius: 18px; }
+  .plan-poster::after { height: 50%; }
+  .plan-cta-row {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 20px 22px;
+    background: linear-gradient(180deg, rgba(20, 9, 12, 0) 0%, rgba(11, 5, 9, 0.95) 30%);
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+  }
+  .plan-cta-row .btn { width: 100%; min-height: 48px; }
+}
+
+/* ============================================================
    モバイル仕上げ — 赤味と質感を整える（最後に書いて優先度を確保）
    ============================================================ */
 

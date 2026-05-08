@@ -232,8 +232,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 料金 ============ */}
-      <section className="s">
+      {/* ============ 料金プラン（ポスター画像） ============ */}
+      <section className="s s-plan">
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">P L A N</span>
@@ -244,7 +244,26 @@ export default function Home() {
             </h2>
             <p>あなたのペースで、占いと付き合えます。</p>
           </div>
-          <div className="plan-grid">
+
+          <figure className="plan-poster">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/plan/poster.jpg"
+              alt="Free ¥0/月 と Premium ¥980/月 — 二つの掛軸"
+              loading="lazy"
+            />
+            <figcaption className="plan-cta-row">
+              <Link href="/login" className="btn btn-outline btn-lg">
+                無料ではじめる
+              </Link>
+              <Link href="/pricing" className="btn btn-primary btn-lg">
+                プレミアムを見る <ArrowRightIcon width={14} height={14} />
+              </Link>
+            </figcaption>
+          </figure>
+
+          {/* 旧 plan-grid のレガシー要素は撤去（CSSは他ページ /pricing で再利用するため残置） */}
+          <div className="plan-grid" hidden>
             <div className="plan">
               <h3>Free</h3>
               <p className="muted">まずは試してみたい方へ</p>
