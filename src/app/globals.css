@@ -505,7 +505,9 @@ h1, h2, h3, .shimmer {
   height: 600px;
 }
 
-/* HERO 全幅の背景動画 */
+/* HERO 全幅の背景動画
+   - クロスフェード: 2本重ねて opacity で切り替え
+   - is-active が付いた方だけ表示。FADE 1.4s で滑らかに入れ替わる */
 .hero-bg-video {
   position: absolute;
   inset: 0;
@@ -515,6 +517,11 @@ h1, h2, h3, .shimmer {
   pointer-events: none;
   z-index: 0;
   filter: saturate(1.05) contrast(1.02);
+  opacity: 0;
+  transition: opacity 1.4s cubic-bezier(0.4, 0, 0.6, 1);
+}
+.hero-bg-video.is-active {
+  opacity: 1;
 }
 .zodiac-ring {
   position: absolute;
