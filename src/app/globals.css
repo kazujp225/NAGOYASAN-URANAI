@@ -2242,6 +2242,16 @@ section.s { padding: 110px 0; position: relative; }
   /* 漢字をやや控えめに */
   .hero::before { font-size: 100px; top: 4%; right: 4%; }
 
+  /* ===== モバイルで動画を抜き、暗景になじませる =====
+     大気レイヤー（提灯/霧/赤い下地）と漢字「占」が背景を担う */
+  .hero-video-frame { display: none; }
+  /* 動画が無い分、ヒーローに静かな赤グラデを足して間延びを防ぐ */
+  .hero {
+    background:
+      radial-gradient(ellipse 90% 60% at 80% 20%, rgba(161, 43, 51, 0.18), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 15% 80%, rgba(255, 138, 61, 0.10), transparent 70%);
+  }
+
   .card-grid.cols-3, .card-grid.cols-4, .card-grid.cols-5 {
     grid-template-columns: repeat(2, 1fr);
   }
