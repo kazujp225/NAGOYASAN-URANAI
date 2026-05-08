@@ -37,12 +37,7 @@ export default function Home() {
               playsInline
               preload="auto"
             >
-              {/* media クエリで配信制御：モバイルでは source が選ばれず読み込まれない */}
-              <source
-                src="/hero/video/character.mp4"
-                type="video/mp4"
-                media="(min-width: 769px)"
-              />
+              <source src="/hero/video/character.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
