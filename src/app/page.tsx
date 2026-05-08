@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FORTUNES } from "@/lib/fortunes";
 import { Character } from "@/components/Character";
 import { CycleImage } from "@/components/CycleImage";
+import { HeroVideoCycle } from "@/components/HeroVideoCycle";
 import { TarotMarquee, type TarotPhoto } from "@/components/TarotMarquee";
 import { HERO_SLIDES, HERO_INTERVAL_MS } from "@/lib/heroSlides";
 import { ArrowRightIcon } from "@/components/icons/Icon";
@@ -29,16 +30,8 @@ export default function Home() {
             この要素の中で％指定すれば、動画コンテンツの座標と一致する。 */}
         <div className="hero-video-frame" aria-hidden="true">
           <div className="hero-video-inner">
-            <video
-              className="hero-bg-video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-            >
-              <source src="/hero/video/character.mp4" type="video/mp4" />
-            </video>
+            {/* 2本の動画をサイクル再生（character.mp4 → character-2.mp4 → ループ） */}
+            <HeroVideoCycle />
           </div>
         </div>
 
