@@ -261,43 +261,6 @@ export default function Home() {
               </Link>
             </figcaption>
           </figure>
-
-          {/* 旧 plan-grid のレガシー要素は撤去（CSSは他ページ /pricing で再利用するため残置） */}
-          <div className="plan-grid" hidden>
-            <div className="plan">
-              <h3>Free</h3>
-              <p className="muted">まずは試してみたい方へ</p>
-              <div className="price">
-                ¥0<small>/ 月</small>
-              </div>
-              <ul>
-                <li>6種類の占いの簡易結果</li>
-                <li>手相撮影UI</li>
-                <li>シェア機能</li>
-              </ul>
-              <Link className="btn btn-ghost btn-block" href="/login">
-                無料ではじめる
-              </Link>
-            </div>
-            <div className="plan premium">
-              <span className="badge">PREMIUM</span>
-              <h3>Premium</h3>
-              <p className="muted">深く知りたいあなたへ</p>
-              <div className="price">
-                ¥980<small>/ 月</small>
-              </div>
-              <ul>
-                <li>詳細結果の全文閲覧</li>
-                <li>総合人生占いの全項目</li>
-                <li>日替わり占いの詳細解説</li>
-                <li>キャラクターからの追加コメント</li>
-                <li>過去の占い履歴閲覧</li>
-              </ul>
-              <Link className="btn btn-primary btn-block" href="/pricing">
-                プランを見る
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
