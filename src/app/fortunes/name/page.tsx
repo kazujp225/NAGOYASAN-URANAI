@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DemoForm } from "@/components/forms/DemoForm";
 import { ThemeChips } from "@/components/forms/ThemeChips";
 
-export const metadata: Metadata = { title: "名前占い" };
+export const metadata: Metadata = { title: "言霊占術 — 名に宿る音の力" };
 
 export default function NamePage() {
   return (
@@ -10,7 +10,7 @@ export default function NamePage() {
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">N A M E&nbsp;&nbsp;R E A D I N G</span>
-          <h2>名前占い</h2>
+          <h2>言霊占術</h2>
           <p>名前の響きから、あなたの本質を読み解きます。</p>
         </div>
 

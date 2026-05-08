@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DemoForm } from "@/components/forms/DemoForm";
 import { ThemeChips } from "@/components/forms/ThemeChips";
 
-export const metadata: Metadata = { title: "居住地・方位占い" };
+export const metadata: Metadata = { title: "方位風水 — 土地と方位の縁" };
 
 const PREFECTURES = [
   "北海道", "東北エリア", "関東エリア", "東京都", "神奈川県",
@@ -16,7 +16,7 @@ export default function LocationPage() {
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">L O C A T I O N</span>
-          <h2>居住地・方位占い</h2>
+          <h2>方位風水</h2>
           <p>今いる場所との相性を読み、心地よい行動方位をお届けします。</p>
         </div>
 

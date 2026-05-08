@@ -4,7 +4,7 @@ import { Character } from "@/components/Character";
 import { ShareRow } from "@/components/ShareRow";
 import { CrownIcon, StarRow } from "@/components/icons/Icon";
 
-export const metadata: Metadata = { title: "今日の運勢" };
+export const metadata: Metadata = { title: "今日の卜占 — 毎日変わる、今日の星" };
 
 export default function DailyPage() {
   return (

@@ -207,7 +207,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">D A I L Y</span>
-            <h2>毎日変わる、今日の運勢</h2>
+            <h2>今日の卜占 — 毎日変わる、今日の星</h2>
             <p>365日分。日付ごとに、その日のあなたへ。</p>
           </div>
           <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
@@ -225,7 +225,7 @@ export default function Home() {
                 会話の中に、ヒントが隠れているかもしれません。
               </p>
               <Link className="btn btn-gold" href="/daily">
-                今日の運勢を詳しく見る <ArrowRightIcon width={14} height={14} />
+                今日の卜占を見る <ArrowRightIcon width={14} height={14} />
               </Link>
             </div>
           </div>

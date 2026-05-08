@@ -5,9 +5,9 @@ import { CrownIcon, ArrowRightIcon, PalmIcon, MoonStarIcon, ScrollIcon } from "@
 export const metadata: Metadata = { title: "マイページ" };
 
 const HISTORY = [
-  { slug: "palm", name: "手相占い", title: "変化の入口にいます", date: "2026/05/06", Icon: PalmIcon },
-  { slug: "birthdate", name: "生年月日占い", title: "静かな再起動", date: "2026/05/03", Icon: MoonStarIcon },
-  { slug: "name", name: "名前占い", title: "響きが結ぶ縁", date: "2026/04/29", Icon: ScrollIcon },
+  { slug: "palm", name: "掌紋占術", title: "変化の入口にいます", date: "2026/05/06", Icon: PalmIcon },
+  { slug: "birthdate", name: "宿曜占星", title: "静かな再起動", date: "2026/05/03", Icon: MoonStarIcon },
+  { slug: "name", name: "言霊占術", title: "響きが結ぶ縁", date: "2026/04/29", Icon: ScrollIcon },
 ];
 
 export default function MyPage() {

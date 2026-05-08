@@ -38,7 +38,7 @@ export default function PricingPage() {
             </div>
             <ul>
               <li>詳細結果の全文閲覧</li>
-              <li>総合人生占いの全項目</li>
+              <li>命運総鑑の全項目</li>
               <li>日替わり占いの詳細解説</li>
               <li>キャラクターからの追加コメント</li>
               <li>過去の占い履歴閲覧</li>
@@ -53,7 +53,7 @@ export default function PricingPage() {
           <div className="result-body" style={{ margin: 0 }}>
             <h3>単発鑑定について</h3>
             <p>
-              「総合人生占い」「節目の人生鑑定」など、深い鑑定を一度だけお試しいただける単発プランもご用意しています。
+              「命運総鑑」「節目の人生鑑定」など、深い鑑定を一度だけお試しいただける単発プランもご用意しています。
               <br />
               価格帯：¥300 〜 ¥1,500（鑑定内容により異なります）
             </p>

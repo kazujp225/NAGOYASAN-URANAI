@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DemoForm } from "@/components/forms/DemoForm";
 import { ThemeChips } from "@/components/forms/ThemeChips";
 
-export const metadata: Metadata = { title: "生年月日占い" };
+export const metadata: Metadata = { title: "宿曜占星 — 生まれた日の星詠み" };
 
 export default function BirthdatePage() {
   return (
@@ -10,7 +10,7 @@ export default function BirthdatePage() {
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">B I R T H D A T E</span>
-          <h2>生年月日占い</h2>
+          <h2>宿曜占星</h2>
           <p>あなたが生まれた日から、本質と今の運気を読み解きます。</p>
         </div>
 

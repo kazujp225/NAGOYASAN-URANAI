@@ -25,17 +25,17 @@ export function Footer() {
           <div>
             <h5>占いを試す</h5>
             <ul>
-              <li><Link href="/fortunes/palm">手相占い</Link></li>
-              <li><Link href="/fortunes/name">名前占い</Link></li>
-              <li><Link href="/fortunes/birthdate">生年月日占い</Link></li>
-              <li><Link href="/fortunes/location">居住地占い</Link></li>
-              <li><Link href="/fortunes/life">総合人生占い</Link></li>
+              <li><Link href="/fortunes/palm">掌紋占術</Link></li>
+              <li><Link href="/fortunes/name">言霊占術</Link></li>
+              <li><Link href="/fortunes/birthdate">宿曜占星</Link></li>
+              <li><Link href="/fortunes/location">方位風水</Link></li>
+              <li><Link href="/fortunes/life">命運総鑑</Link></li>
             </ul>
           </div>
           <div>
             <h5>サービス</h5>
             <ul>
-              <li><Link href="/daily">今日の運勢</Link></li>
+              <li><Link href="/daily">今日の卜占</Link></li>
               <li><Link href="/pricing">料金プラン</Link></li>
               <li><Link href="/mypage">マイページ</Link></li>
             </ul>

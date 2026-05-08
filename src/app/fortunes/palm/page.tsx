@@ -4,7 +4,7 @@ import { DemoForm } from "@/components/forms/DemoForm";
 import { ThemeChips } from "@/components/forms/ThemeChips";
 import { UploadZone } from "@/components/forms/UploadZone";
 
-export const metadata: Metadata = { title: "手相占い" };
+export const metadata: Metadata = { title: "掌紋占術 — 手のひらの紋を読む" };
 
 export default function PalmPage() {
   return (
@@ -12,7 +12,7 @@ export default function PalmPage() {
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">P A L M&nbsp;&nbsp;R E A D I N G</span>
-          <h2>手相占い</h2>
+          <h2>掌紋占術</h2>
           <p>手のひらを撮影、または画像をアップロードしてください。</p>
         </div>
 

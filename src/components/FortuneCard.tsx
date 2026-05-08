@@ -85,7 +85,7 @@ export function FortuneCard({
             <img src={fortune.image} alt={fortune.name} loading="lazy" />
           )}
           <div className="fc-cover-overlay fc-score-overlay">
-            <span className="fc-eyebrow">TODAY / 今日の運勢</span>
+            <span className="fc-eyebrow">TODAY / 今日の卜占</span>
             <div className="fc-score-line">
               <h3 className="fc-title-mid">{fortune.name}</h3>
               <div className="fc-score-num">92<small>/100</small></div>

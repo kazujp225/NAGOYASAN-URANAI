@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DemoForm } from "@/components/forms/DemoForm";
 import { ThemeChips } from "@/components/forms/ThemeChips";
 
-export const metadata: Metadata = { title: "総合人生占い" };
+export const metadata: Metadata = { title: "命運総鑑 — 人生を一度に読む" };
 
 const PREFECTURES = [
   "北海道", "東京都", "神奈川県", "愛知県",
@@ -15,7 +15,7 @@ export default function LifePage() {
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">L I F E&nbsp;&nbsp;R E A D I N G</span>
-          <h2>総合人生占い</h2>
+          <h2>命運総鑑</h2>
           <p>名前・生年月日・居住地から、あなたの全体像を映し出します。</p>
         </div>
 
