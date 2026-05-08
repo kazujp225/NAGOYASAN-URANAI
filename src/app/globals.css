@@ -2545,20 +2545,35 @@ section.s { padding: 110px 0; position: relative; }
 }
 
 @media (max-width: 768px) {
-  .plan-poster { border-radius: 18px; }
-  .plan-poster::after { height: 50%; }
+  .plan-poster {
+    border-radius: 16px;
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.55),
+      0 0 30px rgba(179, 38, 30, 0.10);
+  }
+  /* モバイルではグラデオーバーレイは不要（CTA は画像の下に置く） */
+  .plan-poster::after { display: none; }
   .plan-cta-row {
     position: static;
     transform: none;
+    left: auto;
+    bottom: auto;
     flex-direction: column;
-    gap: 12px;
-    padding: 18px 20px 22px;
-    background: linear-gradient(180deg, rgba(20, 9, 12, 0) 0%, rgba(11, 5, 9, 0.95) 30%);
-    margin-top: -80px;
-    position: relative;
-    z-index: 2;
+    gap: 10px;
+    padding: 16px;
+    margin: 0;
+    background: rgba(11, 5, 9, 0.6);
+    border-top: 1px solid var(--line);
+    box-sizing: border-box;
+    width: 100%;
   }
-  .plan-cta-row .btn { width: 100%; min-height: 48px; }
+  .plan-cta-row .btn {
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
 }
 
 /* ============================================================
