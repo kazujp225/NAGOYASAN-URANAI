@@ -2242,16 +2242,7 @@ section.s { padding: 110px 0; position: relative; }
   /* 漢字をやや控えめに */
   .hero::before { font-size: 100px; top: 4%; right: 4%; }
 
-  /* ===== モバイルで動画を抜き、暗景になじませる =====
-     大気レイヤー（提灯/霧/赤い下地）と漢字「占」が背景を担う */
-  .hero-video-frame { display: none; }
-  /* 動画が無い分、ヒーローに静かな赤グラデを足して間延びを防ぐ */
-  .hero {
-    background:
-      radial-gradient(ellipse 90% 60% at 80% 20%, rgba(161, 43, 51, 0.18), transparent 70%),
-      radial-gradient(ellipse 70% 50% at 15% 80%, rgba(255, 138, 61, 0.10), transparent 70%);
-  }
-
+  /* タブレット〜小デスクトップ向けのレイアウト圧縮（動画は抜かない） */
   .card-grid.cols-3, .card-grid.cols-4, .card-grid.cols-5 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2268,6 +2259,17 @@ section.s { padding: 110px 0; position: relative; }
 
   /* 大気レイヤーをモバイルでは少し弱める */
   .lantern { filter: blur(50px); opacity: 0.85; }
+}
+
+/* ===== 768px 以下（スマホ）のみ：動画を抜いて暗景になじませる =====
+   タブレット〜デスクトップは動画継続。 */
+@media (max-width: 768px) {
+  .hero-video-frame { display: none; }
+  .hero {
+    background:
+      radial-gradient(ellipse 90% 60% at 80% 20%, rgba(161, 43, 51, 0.18), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 15% 80%, rgba(255, 138, 61, 0.10), transparent 70%);
+  }
 }
 
 @media (max-width: 540px) {
