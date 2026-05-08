@@ -1,0 +1,23 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# このファイルがあると、Render が自動で Web Service を作成・デプロイします。
+# 接続手順:
+#   1. https://dashboard.render.com → New + → Blueprint
+#   2. リポジトリ kazujp225/NAGOYASAN-URANAI を選択
+#   3. このファイルが検出され、設定どおりにデプロイされます
+
+services:
+  - type: web
+    name: nagoyasan-uranai
+    runtime: node
+    plan: free                  # starter/standard に上げると常時起動・高速
+    region: singapore           # oregon / frankfurt / ohio などに変更可
+    branch: main
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: true            # main に push すると自動再デプロイ
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
